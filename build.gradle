@@ -26,8 +26,12 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
-    implementation 'org.flywaydb:flyway-core'
+    runtimeOnly 'org.postgresql:r2dbc-postgresql'
+
+    implementation 'org.flywaydb:flyway-core:9.22.3'
     implementation 'org.springframework:spring-jdbc'
+
+    runtimeOnly 'org.postgresql:postgresql'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
